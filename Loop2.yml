@@ -1,0 +1,8 @@
+---
+- hosts: localhost
+  become: true
+  tasks:
+   - name: Install list of packages
+     yum:
+      name: ['httpd', 'wget', 'vim', 'zip', 'unzip']
+...
