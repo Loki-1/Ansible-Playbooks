@@ -39,4 +39,29 @@
       mode: 0775
       recurse: yes
       state: directory
-  
+   - name: Change owner and group and permissions to /opt/sonatype-work
+     file:
+      path: /opt/sonatype-work/
+      group: nexus
+      owner: nexus
+      mode: 0775
+      recurse: yes
+      state: directory
+   - name: Set the run_as_user parameter in nexus.rc
+     lineinfile:
+      dest: /opt/nexus/bin/nexus.rc
+      regexp: "#run_as_user="
+      line: "run_as_user=nexus"
+      backrefs: true
+   - name: Create soft link for nexus
+     file:
+      src: /opt/nexus/bin/nexus
+      dest: /etc/init.d/nexus
+      state: link
+   - name: Start nexus service
+     systemd:
+      name: nexus
+      state: started
+      daemon_reload: yes
+      enabled: yes
+...
