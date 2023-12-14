@@ -22,3 +22,12 @@ Tasks are written using YAML syntax and describe a specific action, such as inst
 
 Roles provide a way to organize and package related tasks, handlers, variables, and files into a reusable structure.
 Roles can be used across multiple playbooks, making it easier to manage and share configuration logic.
+
+Variables:
+
+Variables can be used to parameterize your playbooks and make them more flexible.
+Variables can be defined at various levels, including play level, host level, or in separate variable files.
+Handlers:
+
+Handlers are tasks that get triggered by other tasks. They are typically used to restart services or perform similar actions only when needed.
+Handlers are defined separately and then notified by tasks when necessary.
