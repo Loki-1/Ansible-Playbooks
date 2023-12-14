@@ -7,3 +7,8 @@ Here's a breakdown of key components and concepts related to Ansible playbooks:
 
 A playbook is a YAML file that contains a list of plays.
 Each play consists of a set of tasks to be executed on a specific group of hosts.
+
+Hosts and Inventory:
+
+Ansible operates on a group of hosts specified in an inventory file.
+The inventory file lists the hosts and organizes them into groups.
