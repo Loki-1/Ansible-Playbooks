@@ -33,13 +33,15 @@ Variables can be defined at various levels, including play level, host level, or
 Handlers are tasks that get triggered by other tasks. They are typically used to restart services or perform similar actions only when needed.
 Handlers are defined separately and then notified by tasks when necessary.
 
-Modules:
+## Modules:
 
 Ansible modules are units of code that perform specific tasks on remote hosts.
 Tasks in playbooks use modules to carry out actions like managing packages, files, users, and more.
-Conditionals and Loops:
+
+## Conditionals and Loops:
 
 Playbooks support conditionals and loops, allowing you to add logic to your tasks and execute them based on certain conditions or repeat them multiple times.
-Tags:
+
+## Tags:
 
 Tags allow you to selectively run specific tasks within a playbook, making it useful for partial playbook execution.
